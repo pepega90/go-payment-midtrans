@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"os"
@@ -6,7 +6,7 @@ import (
 	"github.com/midtrans/midtrans-go"
 )
 
-func (app *Config) SetupKeyAccess() {
+func SetupMidtransKeyAccess() {
 	midtrans.ServerKey = os.Getenv("SERVER_KEY")
 	midtrans.Environment = midtrans.Sandbox
 	midtrans.ClientKey = os.Getenv("CLIENT_KEY")
